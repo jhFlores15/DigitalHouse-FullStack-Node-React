@@ -1,0 +1,10 @@
+[
+    {
+        "name": "visited",
+        "description": "Últimos agregados"
+    },
+    {
+        "name": "in-sale",
+        "description": "En oferta"
+    }
+]

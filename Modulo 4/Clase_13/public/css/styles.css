@@ -1,0 +1,16 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rosybrown;
+}
+.container{
+    width:90%;
+    padding:15px;
+    margin: 5px;
+}
+
+.container2{
+    width:50%;
+}
