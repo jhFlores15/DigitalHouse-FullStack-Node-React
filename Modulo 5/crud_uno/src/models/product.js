@@ -53,9 +53,16 @@ let fileProduct = {
     filterProduct(atribute, value){
         let products = this.readJSON();
         return products.filter(function(item){
-            console.log(item[atribute] );
             return item[atribute] == value;
         });
+    },
+    matchProduct(keywords){
+        let products = this.readJSON();
+        let resultFilter = products.filter(function(item){
+            return (item.name).includes(keywords);
+        });
+
+        return resultFilter;
     }
 }
 

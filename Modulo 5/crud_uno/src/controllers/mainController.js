@@ -8,7 +8,10 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const controller = {
 	index: (req, res) => res.render("index.ejs",{visited:fileproducts.filterProduct('category','visited'), inSale:fileproducts.filterProduct('category','in-sale')}),
-	search: (req, res) => res.render(path.resolve(__dirname,"../views/results.ejs")),
+	search: (req, res)=> { 
+		let keywords = req.query.keywords;
+		res.render("results.ejs",{products: fileproducts.matchProduct(keywords), keywords:keywords});
+	},
 };
 
 module.exports = controller;
